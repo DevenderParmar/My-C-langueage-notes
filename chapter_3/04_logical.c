@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+    int a = 0;
+    int b = 1;
+    printf("the value of a and b %d\n", a && b);
+    printf("the value of a or b %d\n", a || b);
+    printf("the value of not(a) is %d\n", !a);
+    printf("the value of not(b) is %d", !b);
+    return 0;
+}
