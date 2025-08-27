@@ -13,4 +13,4 @@ It is meant as a quick reference for important concepts, syntax, and examples.
 - Pointers
 - Structures and unions
 - File handling
-- Practice problems and solutions
+- Practice problems and solutions.
