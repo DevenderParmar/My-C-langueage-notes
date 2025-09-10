@@ -18,12 +18,13 @@ int main()
     printf("Fibonacci series: %d %d ", t1, t2);
     for (int i = 3; i <= n; i++) {
       next_term = t1 + t2;
-      printf("%d ", next_term);
+      // printf("%d ", next_term);
       t1 = t2;
       t2 = next_term;
     }
     printf("\n");
   }
+  printf("The fibo number = %d",next_term);
 
   return 0;
 }
