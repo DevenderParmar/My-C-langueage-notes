@@ -31,9 +31,10 @@ node *addlast(node *head, int value)
   {
     p = p->next;
   }
-  p->next= n;
+  p->next = n;
   return head;
 }
+
 void printlist(node *head)
 {
   node *p = head;
@@ -48,9 +49,9 @@ int main()
 {
   node *head = NULL;
 
-  // head = addfirst(head, 10);
-  // head = addfirst(head, 20);
-  // head = addfirst(head, 30);
+  head = addfirst(head, 10); // we are doing this because the function in which we are sending the head cant modify it
+  head = addfirst(head, 20); // thats why we are manually reassigning it.
+  head = addfirst(head, 30);
 
   head = addlast(head, 40);
   head = addlast(head, 50);

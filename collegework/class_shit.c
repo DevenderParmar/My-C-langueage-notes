@@ -173,8 +173,8 @@
 // } node;
 // int main()
 // {
-//   node *n1 = (node *)malloc(sizeof(node));
-//   node *n2 = (node *)malloc(sizeof(node));
+    //   node *n1 = (node *)malloc(sizeof(node)); // we are doing this because the function in which we are sending the head cant modify it
+    //   node *n2 = (node *)malloc(sizeof(node)); // thats why we are manually reassigning it.
 //   node *n3 = (node *)malloc(sizeof(node));
 
 //   n1->data = 10;
