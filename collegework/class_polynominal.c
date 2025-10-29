@@ -12,6 +12,10 @@ node *insertend(node *head, int coef, int expo)
     n->coef = coef;
     n->expo = expo;
     n->next = NULL;
+    if(head == NULL)
+    {
+        return n;
+    }
     node *ptr = head;
     while (ptr->next != NULL)
     {
@@ -56,12 +60,12 @@ node *add(node *p1, node *p2)
     }
     while(p1 != NULL)
     {
-        res = insertend(p1,p1->coef,p1->expo);
+        res = insertend(res,p1->coef,p1->expo);
         p1 = p1->next;
     }
     while(p2 != NULL)
     {
-        res = insertend(p2,p2->coef,p2->expo);
+        res = insertend(res,p2->coef,p2->expo);
         p2 = p2->next;
     }
     return res;
@@ -80,5 +84,8 @@ int main()
     p2 = insertend(p2, 3, 0);
 
     print(p2);
+
+    node* res = add(p1,p2);
+    print(res);
     return 0;
 }
