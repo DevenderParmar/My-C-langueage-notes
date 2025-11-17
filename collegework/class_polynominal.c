@@ -34,39 +34,39 @@ void print(node *head)
     }
     printf("NULL\n");
 }
-node *add(node *p1, node *p2)
+node *add(node *poly1, node *poly2)
 {
     node *res = NULL;
-    while (p1 != NULL && p2 != NULL)
+    while (poly1 != NULL &&  poly2 != NULL)
     {
 
-        if (p1->expo == p2->expo)
+        if (poly1->expo == poly2->expo)
         {
-            int sum = p1->coef + p2->coef;
-            res = insertend(res, sum, p1->expo);
-            p1 = p1->next;
-            p2 = p2->next;
+            int sum = poly1->coef + poly2->coef;
+            res = insertend(res, sum, poly1->expo);
+            poly1 = poly1->next;
+            poly2 = poly2->next;
         }
-        else if (p1->expo > p2->expo)
+        else if (poly1->expo > poly2->expo)
         {
-            res = insertend(res, p1->coef, p1->expo);
-            p1 = p1->next;
+            res = insertend(res, poly1->coef, poly1->expo);
+            poly1 = poly1->next;
         }
-        else if (p2->expo > p1->expo)
+        else if (poly2->expo > poly1->expo)
         {
-            res = insertend(res, p2->coef, p2->expo);
-            p2 = p2->next;
+            res = insertend(res, poly2->coef, poly2->expo);
+            poly2= poly2->next;
         }
     }
-    while(p1 != NULL)
+    while(poly1!= NULL)
     {
-        res = insertend(res,p1->coef,p1->expo);
-        p1 = p1->next;
+        res = insertend(res,poly1->coef,poly1->expo);
+        poly1 = poly1->next;
     }
-    while(p2 != NULL)
+    while(poly2 != NULL)
     {
-        res = insertend(res,p2->coef,p2->expo);
-        p2 = p2->next;
+        res = insertend(res,poly2->coef,poly2->expo);
+        poly2 = poly2->next;
     }
     return res;
 }
