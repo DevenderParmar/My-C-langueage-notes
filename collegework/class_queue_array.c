@@ -1,13 +1,15 @@
 #include <stdio.h>
-#define size 100
+#define size 5    // If you're checking rear == 4, then size must be 5
+
 int queue[size];
 int rear = -1;
 int front = -1;
+
 void enqueue(int data)
 {
-    if (rear == 4)
+    if (rear == size - 1)
     {
-        printf("Overflowed!!");
+        printf("Overflowed!!\n");
         return;
     }
     if (front == -1)
@@ -17,24 +19,29 @@ void enqueue(int data)
     rear++;
     queue[rear] = data;
 }
+
 int dequeue()
 {
-    if (front = -1)
+    if (front == -1)
     {
-        printf("queue underflow");
+        printf("Queue underflow\n");
         return -1;
     }
+
     int copy = queue[front];
-    if (front == size - 1)
+
+    if (front == rear)
     {
+        // Queue becomes empty
         front = -1;
         rear = -1;
     }
-    else{
-
+    else
+    {
         front++;
     }
-        return copy;
+
+    return copy;
 }
 
 int main()
@@ -43,9 +50,9 @@ int main()
     enqueue(20);
     enqueue(30);
     enqueue(40);
-    for (int i = 0; i < 4; i++)
+
+    for (int i = front; i <= rear; i++)
     {
         printf("%d ", queue[i]);
     }
-    return 0;
 }

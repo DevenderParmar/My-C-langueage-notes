@@ -7,7 +7,7 @@ typedef struct node
   struct node *next;
 } node;
 
-node *addfirst(node *head, int value)
+node* addfirst(node *head, int value)
 {
   node *n = (node *)malloc(sizeof(node));
   n->data = value;
