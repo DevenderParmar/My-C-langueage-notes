@@ -42,7 +42,6 @@ int main()
     node *n5 = (node *)malloc(sizeof(node));
     node *n6 = (node *)malloc(sizeof(node));
     node *n7 = (node *)malloc(sizeof(node));
-
     n1->data = 1;
     n2->data = 3;
     n3->data = 7;
